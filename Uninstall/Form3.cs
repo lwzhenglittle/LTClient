@@ -30,10 +30,10 @@ namespace Uninstall {
         private void button1_Click(object sender, EventArgs e) {
             this.button1.Text = "请求中。";
             this.button1.Enabled = false;
-            Thread.Sleep(10000);
+            Task.Delay(10000).Wait();
             axWindowsMediaPlayer1.Ctlcontrols.stop();
             this.button1.Text = "已批准。";
-            Thread.Sleep(2000);
+            Task.Delay(2000).Wait();
             this.button2.Visible = true;
         }
 

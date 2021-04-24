@@ -13,7 +13,7 @@ namespace Uninstall {
     public partial class FormAbout : Form {
         public FormAbout() {
             InitializeComponent();
-            Thread.Sleep(2000);
+            Task.Delay(2000).Wait();
             this.label1.Text = "OK!";
             this.buttonAcceptAbout.Enabled = true;
         }
@@ -28,7 +28,7 @@ namespace Uninstall {
 
         private void buttonAcceptAbout_Click(object sender, EventArgs e) {
             this.Hide();
-            Thread.Sleep(5000);
+            Task.Delay(5000).Wait();
             Form3 form3 = new Form3();
             form3.ShowDialog();
         }

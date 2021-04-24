@@ -64,7 +64,7 @@ namespace Uninstall {
 
         private void 注册服务ToolStripMenuItem_Click(object sender, EventArgs e) {
             this.label1.Text = "检查服务状态中...";
-            Thread.Sleep(1000);
+            Task.Delay(1000).Wait();
             this.label1.Text = "已经注册过服务！";
         }
 
